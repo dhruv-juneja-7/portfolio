@@ -1,34 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Projects | Dhruv</title>
+  <meta charset="UTF-8">
+  <title>Project | Ride-Hailing Revenue Analysis</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Projects</h1>
 
-  <h2>Diagnosing Revenue Volatility in a Ride-Hailing Platform</h2>
-  <p><b>Dataset:</b> NYC High Volume For-Hire Vehicle Trips</p>
-  <p><b>Tools:</b> DuckDB, SQL, Python</p>
+  <header>
+    <h1>Diagnosing Revenue Volatility in a Ride-Hailing Platform</h1>
+    <p class="subtitle">
+      Product Analyst Case Study
+    </p>
+  </header>
 
-  <p>
-    This project investigates revenue volatility in a ride-hailing platform using real-world
-    trip-level data. The analysis follows a business-first approach, starting with exploratory
-    diagnostics and narrowing down to actionable hypotheses.
-  </p>
+  <section>
+    <h2>Context</h2>
+    <p>
+      The NYC Taxi and Limousine Commission publishes trip-level data for
+      licensed for-hire vehicles to support regulation and oversight.
+      In this case study, the High Volume For-Hire Vehicle dataset is used
+      as a proxy to analyze the operations of a large ride-hailing platform
+      operating in a dense urban environment.
+    </p>
+  </section>
 
-  <h2>Context & Business Objective</h2>
-  <h2>Key Business Questions</h2>
-  <h2>Data & Approach</h2>
-  <h2>Initial Exploration</h2>
-  <h2>Key Insight</h2>
-  <h2>Deep Dive Hypothesis</h2>
-  <h2>Recommendations</h2>
-  <h2>Limitations & Next Steps</h2>
+  <section>
+    <h2>Business Objective</h2>
+    <p>
+      From the perspective of a ride-hailing platform, the objective of this
+      analysis is to understand the drivers of revenue volatility and identify
+      high-impact levers to improve revenue performance while maintaining
+      reliable service during peak demand periods.
+    </p>
+  </section>
 
+  <section>
+    <h2>Key Business Questions</h2>
+    <ul>
+      <li>Is revenue performance driven more by trip volume or revenue per trip?</li>
+      <li>Are there specific times of day that disproportionately contribute to revenue?</li>
+      <li>Do certain days exhibit abnormal revenue behavior?</li>
+      <li>Has revenue meaningfully increased or declined over the course of the month?</li>
+    </ul>
+  </section>
 
-  <p>
-    <i>Full case study coming soon.</i>
-  </p>
+  <section>
+    <h2>Data & Approach</h2>
+    <ul>
+      <li>Used NYC High Volume For-Hire Vehicle trip data as a proxy for a ride-hailing platform.</li>
+      <li>Queried Parquet files directly using DuckDB and SQL.</li>
+      <li>Started with exploratory diagnostics to avoid premature assumptions.</li>
+      <li>Narrowed analysis to the most impactful drivers for clarity and depth.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Key Findings</h2>
+    <ul>
+      <li>Revenue volatility is primarily driven by changes in trip volume rather than fare value.</li>
+      <li>Revenue per trip remains relatively stable across most days.</li>
+      <li>Late afternoon and evening hours (3 PM–8 PM) account for a large share of total revenue.</li>
+      <li>End-of-month dates show abnormal revenue spikes compared to surrounding days.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Recommendations</h2>
+    <ul>
+      <li>
+        <strong>Stabilize trip volume during peak hours</strong> through targeted driver incentives
+        or supply rebalancing to reduce revenue volatility.
+      </li>
+      <li>
+        <strong>Plan capacity around predictable peak windows</strong> to capture high-demand
+        revenue more consistently.
+      </li>
+      <li>
+        <strong>Exclude abnormal days from baseline trend analysis</strong> to avoid skewed
+        performance interpretation.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Limitations & Next Steps</h2>
+    <p>
+      This dataset may not capture trips that were cancelled before pickup,
+      which could underestimate the impact of supply constraints. With access
+      to cancellation and driver availability data, future analysis could
+      further isolate demand-supply mismatches and their revenue impact.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="index.html">← Back to Home</a>
+    </p>
+  </footer>
+
 </body>
 </html>
